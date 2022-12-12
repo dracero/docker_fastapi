@@ -12,12 +12,6 @@ ENV PYTHONUNBUFFERED=1
 # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
-RUN apt-get update; apt-get install curl
-RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-RUN apt-get install git-lfs
-RUN git lfs install
-RUN git clone https://huggingface.co/dracero/autotrain-dracero-fine-tuned-physics-2123168626
-RUN rm -rf /tmp/model/.git
 WORKDIR /app
 COPY . /app
 
