@@ -3,7 +3,6 @@ from typing import Union
 from transformers import pipeline
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from tensorflow.python.keras.saving.hdf5_format import save_attributes_to_hdf5_group
 
 app = FastAPI()
 origins = ["*"]
